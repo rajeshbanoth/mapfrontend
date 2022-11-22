@@ -5,7 +5,7 @@ import Icon from './icon.png'
 import Geocode from "react-geocode";
 import io from 'socket.io-client'
 
-Geocode.setApiKey("AIzaSyAc3i0GAN-Vzw7ZPK4FMR4RBXyKs7KTWow");
+Geocode.setApiKey(process.env.GOOGLE_CODE);
 const socket = io.connect("https://livetrackingapp.herokuapp.com/")
 
 const libraries = ['places']
@@ -127,7 +127,7 @@ export default function  User(props) {
 
   const { isLoaded } = useJsApiLoader({
     id: 'google-map-script',
-    googleMapsApiKey: "AIzaSyAc3i0GAN-Vzw7ZPK4FMR4RBXyKs7KTWow",
+    googleMapsApiKey: process.env.GOOGLE_CODE,
     libraries: libRef.current,
   })
 
