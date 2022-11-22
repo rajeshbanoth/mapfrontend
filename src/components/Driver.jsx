@@ -9,17 +9,12 @@ const socket = io.connect("https://livetrackingapp.herokuapp.com/")
 
 const libraries = ['places']
 export default function Driver(props) {
-
-
   let libRef = React.useRef(libraries)
-
-
-  
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
   const [duration, setDuration] = useState('')
   const [destination, setdestination] = useState(null)
-const  [map,setMap]=useState(null)
+  const  [map,setMap]=useState(null)
 
   const [center, setcenter] = useState({
     lat: 28.522799,
