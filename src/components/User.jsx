@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Autocomplete, DirectionsRenderer, GoogleMap, Marker, MarkerClusterer, MarkerF, useJsApiLoader } from '@react-google-maps/api';
-import { Button, Input, TextField, Typography } from '@mui/material';
+
 import Icon from './icon.png'
 import Geocode from "react-geocode";
 import io from 'socket.io-client'
@@ -242,8 +242,8 @@ export default function  User(props) {
         {isLoaded ? (
           <>
          
-            {distance !== '' && (<> <Typography>Distance Remaining:{distance}</Typography> </>)}
-            {distance !== '' && (<> <Typography>Estimation Duration:{duration}</Typography> </>)}
+            {distance !== '' && (<> <label>Distance Remaining:{distance}</label> </>)}
+            {distance !== '' && (<> <label>Estimation Duration:{duration}</label> </>)}
 
             <GoogleMap
               mapContainerStyle={containerStyle}
